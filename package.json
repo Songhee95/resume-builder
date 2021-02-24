@@ -9,18 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dcampbell2/resume-builder.git"
+    "url": "git+https://github.com/Songhee95/resume-builder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dcampbell2/resume-builder/issues"
+    "url": "https://github.com/Songhee95/resume-builder/issues"
   },
-  "homepage": "https://github.com/dcampbell2/resume-builder#readme",
+  "homepage": "https://github.com/Songhee95/resume-builder#readme",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-pdf": "^1.2.2",
