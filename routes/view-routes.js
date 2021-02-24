@@ -7,12 +7,12 @@ router.get("/", function (req, res) {
   if (req.user) {
     res.render("index");
   }
-  res.render("homePage", {
-    style: "login.css",
-  });
+  res.render("homePage");
 });
 router.get("/login", function (req, res) {
-  res.render("login");
+  res.render("login", {
+    style: "login.css",
+  });
 });
 router.get("/signin", function (req, res) {
   res.render("signin");

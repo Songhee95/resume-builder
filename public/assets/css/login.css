@@ -1,27 +1,7 @@
-nav {
-  height: 70px;
+.login__container {
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.089);
 }
-.app__name {
-  font-size: 30px;
-  font-weight: 700;
-}
-.home__container {
-  background-image: url("../../images/homeImage.jpg");
-  background-size: cover;
-  height: 700px;
-  padding: 100px;
-  text-align: center;
-}
-.home__welcome {
-  text-align: center;
-  font-size: 70px;
+.login__wrap {
   padding: 50px;
-  background-color: rgba(240, 248, 255, 0.5);
-}
-.home__description {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-  padding: 30px 100px;
-  background-color: rgba(240, 248, 255, 0.5);
 }
