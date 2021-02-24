@@ -3,45 +3,42 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
- <html>
+<html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
   </head>
   <body>
     <div id="content">
       <body>
         Experience
-    </body> 
-  </div>
-  <button id="cmd"> Generate PDF </button>
-  <!-- jQuery library -->
-  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <!-- jsPDF library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+      </body>
+    </div>
+    <button id="cmd">Generate PDF</button>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 
-  <script>
-      
-    $(function () {
-            var doc = new jsPDF();
-            var specialElementHandlers = {
-                '#editor': function (element, renderer) {
-                    return true;
-                }
-            };
-            $("#cmd").click(function () {
-    doc.fromHTML($("#content").html(), 15, 15, {
-      width: 170,
-      elementHandlers: specialElementHandlers,
-    });
-    doc.save("sample-file.pdf");
-  });
-
-});
- </script>
-   </body>
-</html> 
+    <script>
+      $(function () {
+        var doc = new jsPDF();
+        var specialElementHandlers = {
+          "#editor": function (element, renderer) {
+            return true;
+          },
+        };
+        $("#cmd").click(function () {
+          doc.fromHTML($("#content").html(), 15, 15, {
+            width: 170,
+            elementHandlers: specialElementHandlers,
+          });
+          doc.save("sample-file.pdf");
+        });
+      });
+    </script>
+  </body>
+</html>
