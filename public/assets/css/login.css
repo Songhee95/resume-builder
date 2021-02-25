@@ -1,7 +1,15 @@
 .login__container {
   margin-top: 50px;
   background-color: rgba(0, 0, 0, 0.089);
+  border-radius: 3rem;
 }
 .login__wrap {
-  padding: 50px;
+  padding: 100px 150px;
+}
+.login__submit__button {
+  border-radius: 5px;
+}
+.login__error__message {
+  background-color: rgba(241, 168, 168, 0.404);
+  color: red;
 }
