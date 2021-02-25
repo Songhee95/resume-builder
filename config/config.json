@@ -1,16 +1,16 @@
 {
     "development": {
-      "username": "e5fqtrkh5urku6am",
-      "password": "j079o1ppu74apxf7",
-      "database": "wq812oiskr9jfw6z",
-      "host": "sm9j2j5q6c8bpgyq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "username": "khqp0z9ai1f253jy",
+      "password": "abg6wpsdu2lm62b4",
+      "database": "pxw8ing2a9nesabo",
+      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql"
     },
     "test": {
-      "username": "e5fqtrkh5urku6am",
-      "password": "j079o1ppu74apxf7",
-      "database": "wq812oiskr9jfw6z",
-      "host": "sm9j2j5q6c8bpgyq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "username": "khqp0z9ai1f253jy",
+      "password": "abg6wpsdu2lm62b4",
+      "database": "pxw8ing2a9nesabo",
+      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql"
     },
     "production": {
