@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  $("form.login").on("submit", function (event) {
+  $(".login").on("submit", function (event) {
     event.preventDefault();
-    let userEmail = $(".userEmail").val();
-    let userPwd = $(".userPassword").val();
+    let userEmail = $(".login__userEmail").val();
+    let userPwd = $(".login__userPassword").val();
 
     //verify the user
     $.ajax({
