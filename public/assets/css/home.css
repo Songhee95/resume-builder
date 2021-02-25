@@ -1,31 +1,64 @@
 nav {
-  height: 70px;
-}
-.app__name {
-  font-size: 30px;
-  font-weight: 700;
+  height: 50px;
 }
 .home__container {
-  background-image: url("../../images/homeImage.jpg");
+  background-image: url("../../images/homepageMobile.jpg");
   background-size: cover;
-  height: 700px;
-  padding: 100px;
   text-align: center;
+  height: 500px;
 }
 .home__welcome {
   text-align: center;
-  font-size: 70px;
-  padding: 50px;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px;
   background-color: rgba(240, 248, 255, 0.5);
 }
 .home__description {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 20px 100px 20px;
   text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-  padding: 30px 100px;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
   background-color: rgba(240, 248, 255, 0.5);
+}
+@media screen and (min-width: 620px) {
+  .home__container {
+    height: 600px;
+  }
+  .home__welcome {
+    padding: 50px;
+  }
+  .home__description {
+    padding: 20px 100px 100px 100px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  nav {
+    height: 70px;
+  }
+  .app__name {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .home__container {
+    background-image: url("../../images/homeImage.jpg");
+    background-size: cover;
+    height: 700px;
+    padding: 100px 200px 100px 200px;
+    text-align: center;
+  }
+  .home__welcome {
+    text-align: center;
+    font-size: 60px;
+    padding: 100px;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  .home__description {
+    font-size: 25px;
+    font-weight: 400;
+    padding: 30px 100px;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
 }
