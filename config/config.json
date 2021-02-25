@@ -1,20 +1,20 @@
 {
-    "development": {
-      "username": "khqp0z9ai1f253jy",
-      "password": "abg6wpsdu2lm62b4",
-      "database": "pxw8ing2a9nesabo",
-      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "dialect": "mysql"
-    },
-    "test": {
-      "username": "khqp0z9ai1f253jy",
-      "password": "abg6wpsdu2lm62b4",
-      "database": "pxw8ing2a9nesabo",
-      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "dialect": "mysql"
-    },
-    "production": {
-      "use_env_variable": "JAWSDB_URL",
-      "dialect": "mysql"
-    }
-  }
+    "development": {
+      "username": "khqp0z9ai1f253jy",
+      "password": "abg6wpsdu2lm62b4",
+      "database": "pxw8ing2a9nesabo",
+      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "khqp0z9ai1f253jy",
+      "password": "abg6wpsdu2lm62b4",
+      "database": "pxw8ing2a9nesabo",
+      "host": "de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
+    }
+  }
