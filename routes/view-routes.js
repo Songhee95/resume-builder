@@ -4,11 +4,7 @@ var router = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 router.get("/", function (req, res) {
-  if (req.user) {
-    res.render("index");
-  } else {
-    res.render("homePage");
-  }
+  res.render("homePage");
 });
 router.get("/login", function (req, res) {
   res.render("login", {

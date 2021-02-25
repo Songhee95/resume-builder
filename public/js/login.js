@@ -15,10 +15,10 @@ $(document).ready(function () {
     })
       .then(function () {
         $.get("/api/user_data", function (data) {
-          localStorage.setItem("userId", data.id);
+          sessionStorage.setItem("userId", data.id);
         });
         console.log("data sent!");
-        window.location.replace("/");
+        window.location.replace("/index");
       })
       .catch((err) => {
         event.preventDefault();
