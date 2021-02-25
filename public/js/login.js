@@ -14,8 +14,11 @@ $(document).ready(function () {
       },
     })
       .then(function () {
+        $.get("/api/user_data", function (data) {
+          localStorage.setItem("userId", data.id);
+        });
         console.log("data sent!");
-        window.location.replace("/index");
+        window.location.replace("/");
       })
       .catch((err) => {
         event.preventDefault();

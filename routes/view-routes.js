@@ -6,8 +6,9 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 router.get("/", function (req, res) {
   if (req.user) {
     res.render("index");
+  } else {
+    res.render("homePage");
   }
-  res.render("homePage");
 });
 router.get("/login", function (req, res) {
   res.render("login", {
@@ -17,10 +18,10 @@ router.get("/login", function (req, res) {
 router.get("/signin", function (req, res) {
   res.render("signin");
 });
-router.get("/logout", function (req, res) {
-  req.logout();
-  res.redirect("/");
-});
+// router.get("/logout", function (req, res) {
+//   req.logout();
+//   res.redirect("/");
+// });
 router.get("/index", isAuthenticated, function (req, res) {
   res.render("index", req.user);
 });

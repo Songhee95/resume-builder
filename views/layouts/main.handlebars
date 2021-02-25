@@ -30,15 +30,8 @@
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu navbar-before-login visible">
             <div class="navbar-end">
-                <a class="navbar-item">
-                    Home
-                </a>
-
-                <a class="navbar-item">
-                    Documentation
-                </a>
                 <a href="/signin" class="navbar-item signup__link">
                     Sign up
                 </a>
@@ -47,12 +40,45 @@
                 </a>
             </div>
         </div>
+        <div id="navbarBasicExample" class="navbar-menu  navbar-after-login hidden">
+            <div class="navbar-end">
+                <a class="navbar-item is-active">
+                    Home
+                </a>
+                <a class="navbar-item" href="/newResume">
+                    New Resume
+                </a>
+                <a class="navbar-item logout__button" href="/">
+                    Log Out
+                </a>
+            </div>
+        </div>
     </nav>
     {{{body}}}
 </body>
 <script>
     const user = JSON.parse(localStorage.getItem('userId'))
+    if (user) {
+        $(".navbar-before-login")
+            .removeClass('visible')
+            .addClass('is-hidden')
+        $('.navbar-after-login')
+            .removeClass('is-hidden')
+            .addClass('visible')
+    } else {
+        $(".navbar-before-login")
+            .removeClass('is-hidden')
+            .addClass('visible')
+        $('.navbar-after-login')
+            .removeClass('visible')
+            .addClass('is-hidden')
 
+    }
+
+    $(".logout__button").click(function () {
+        localStorage.setItem("userId", null);
+        window.location.replace('/')
+    });
 </script>
 <script src="../js/login.js" type="text/javascript"></script>
 <script src="../js/signin.js" type="text/javascript"></script>
