@@ -10,6 +10,31 @@
   border-radius: 5px;
 }
 .login__error__message {
+  padding: 5px 30px;
+  font-size: 14px;
   background-color: rgba(241, 168, 168, 0.404);
   color: red;
+  border-radius: 2rem;
+}
+.is-hidden {
+  animation: fadeIn 2s;
+}
+.is-inline {
+  animation: fadeOut 5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

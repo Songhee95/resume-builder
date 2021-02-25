@@ -22,7 +22,12 @@ $(document).ready(function () {
         $(".login__error__message")
           .removeClass("is-hidden")
           .addClass("is-inline");
-
+        function hideMessage() {
+          $(".login__error__message")
+            .removeClass("is-inline")
+            .addClass("is-hidden");
+        }
+        window.setTimeout(hideMessage, 5000);
         console.log(err);
       });
   });
