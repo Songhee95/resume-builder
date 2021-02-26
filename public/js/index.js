@@ -1,5 +1,9 @@
 $(document).ready(function () {
   $.get("/api/user_resume", function (data) {
+    console.log(data.length);
+    $(".index-resume-total").text(
+      `You have Total ${data.length} Resumes on your account.`
+    );
     data.forEach(function (resume) {
       let resumeTile =
         "<div class='tile is-3 has-text-centered'><div class='tile is-parent'><article class='tile is-child notification is-info'><a class='resumeName' href ='/templateOne/";

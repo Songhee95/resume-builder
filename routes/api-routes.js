@@ -4,7 +4,6 @@ var passport = require("../config/passport");
 module.exports = function (app) {
   //verify the user (user authentication)
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    console.log(req.user);
     res.json(req.user);
   });
   app.get("/api/user_resume", function (req, res) {
@@ -17,7 +16,6 @@ module.exports = function (app) {
         },
       })
         .then(function (result) {
-          console.log(result);
           res.json(result);
         })
         .catch((err) => {
@@ -33,10 +31,8 @@ module.exports = function (app) {
     }
   });
   app.post("/api/signin", function (req, res) {
-    console.log(req.body);
     db.User.create(req.body)
       .then(function (result) {
-        console.log(result);
         res.json(result);
       })
       .catch((err) => {
@@ -45,8 +41,6 @@ module.exports = function (app) {
   });
 
   app.post("/api/newResume", (req, res) => {
-    console.log("😀😀😀😀😀😀");
-    console.log(req.body);
     db.Resume.create(req.body)
       .then((result) => {
         res.json(result);
@@ -73,6 +67,7 @@ module.exports = function (app) {
       },
     })
       .then((result) => {
+        console.log("😀😀😀😀😀😀", result);
         return res.json(result);
       })
       .catch((err) => {
@@ -117,7 +112,6 @@ module.exports = function (app) {
       },
     })
       .then((response) => {
-        console.log(response);
         res.json(response);
       })
       .catch((err) => {
