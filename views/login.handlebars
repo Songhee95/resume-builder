@@ -1,3 +1,40 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item app__name" href="/">
+            RESUME BUILDER
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu navbar-before-login visible">
+        <div class="navbar-end">
+            <a href="/signin" class="navbar-item nav-individual signup__link">
+                Sign up
+            </a>
+            <a href="/login" class="navbar-item nav-individual is-active login__link">
+                Log in
+            </a>
+        </div>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu  navbar-after-login hidden">
+        <div class="navbar-end">
+            <a class="navbar-item is-active nav-individual" href='/index'>
+                Home
+            </a>
+            <a class="navbar-item nav-individual" href="/newResume">
+                New Resume
+            </a>
+            <a class="navbar-item logout__button nav-individual" href="/">
+                Log Out
+            </a>
+        </div>
+    </div>
+</nav>
 <div class="container login__container is-max-desktop">
     <div class="login__wrap">
         <h1 class="title">Login <p class='login__error__message is-hidden animated'>Incorrect email or password</p>

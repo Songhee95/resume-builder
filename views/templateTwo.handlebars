@@ -1,154 +1,193 @@
 <head>
-    <link href="../assets/css/templateTwo.css" rel="stylesheet" type="text/css"/>
+  <link href="../assets/css/templateTwo.css" rel="stylesheet" type="text/css" />
 </head>
-<div class="container">
-    <div class="header">
-      <div class="full-name">
-        <span class="first-name" value="{{name}}">{{name}}</span> 
-      </div>
-      <div class="contact-info">
-        <span class="email">Email: </span>
-        <span class="email-val" value="{{email}}">{{email}}</span>
-        <span class="separator"></span>
-        <span class="phone">Phone: </span>
-        <span class="phone-val" value="{{phoneNumber}}">{{phoneNumber}}</span>
-      </div>
-      
-      <div class="about">
-        <span class="position">Objective</span>
-        <span class="desc" value="{{objective}}">{{objective}}
-        </span>
-      </div>
-    </div>
-     <div class="details">
-      <div class="section">
-        <div class="section__title">Experience</div>
-        <div class="section__list">
-            {{#if employer}}
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{employer}}">{{employer}}</div>
-              <div class="duration" value="{{jobStart}} - {{jobEnd}}">{{jobStart}} - {{jobEnd}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{title}}">{{title}}</div>
-              <div class="desc" value="{{description}}">{{description}}</div>
-            </div>
-          </div>
-          {{/if}}
-            {{#if employerB}}      
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{employerB}}">{{employerB}}</div>
-              <div class="duration" value="{{jobStartB}} - {{jobEndB}}">{{jobStartB}} - {{jobEndB}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{titleB}}">{{titleB}}</div>
-              <div class="desc" value="{{descriptionB}}">{{descriptionB}}</div>
-            </div>
-          </div>
-          {{/if}}
-          {{#if employerC}}      
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{employerC}}">{{employerC}}</div>
-              <div class="duration" value="{{jobStartC}} - {{jobEndC}}">{{jobStartC}} - {{jobEndC}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{titleC}}">{{titleC}}</div>
-              <div class="desc" value="{{descriptionC}}">{{descriptionC}}</div>
-            </div>
-          </div>
-          {{/if}}
-        </div>
-      </div>
-      <div class="section">
-          {{#if school}}
-        <div class="section__title">Education</div>
-        <div class="section__list">
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{school}}"></div>
-              <div class="duration" value="{{startDate}} - {{endDate}}">{{startDate}} - {{endDate}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{degree}}">{{degree}}</div>
-              <div class="desc" value="{{program}}">{{program}}</div>
-            </div>
-          </div>
-          {{#if schoolB}}
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{schoolB}}">{{schoolB}}</div>
-              <div class="duration" value="{{startDateB}} - {{endDateB}}">{{startDateB}} - {{endDateB}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{degreeB}}">{{degreeB}}</div>
-              <div class="desc" value="{{programB}}">{{programB}}</div>
-            </div>
-          </div>
-          {{/if}}
-          {{#if schoolC}}
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name" value="{{schoolC}}">{{schoolC}}</div>
-              <div class="duration" value="{{startDateC}} - {{endDateC}}">{{startDateC}} - {{endDateC}}</div>
-            </div>
-            <div class="right">
-              <div class="name" value="{{degreeC}}">{{degreeC}}</div>
-              <div class="desc" value="{{programC}}">{{programC}}</div>
-            </div>
-          </div>
-          {{/if}}
-        </div>
-    {{/if}}
-    </div>
-    {{#if project}}
-       <div class="section">
-        <div class="section__title">Projects</div> 
-         <div class="section__list">
-           <div class="section__list-item">
-             <div class="name" value="{{project}}">{{project}}</div>
-             <div class="text" value="{{summary}}">{{summary}}</div>
-           </div>
-           {{#if projectB}}
-           <div class="section__list-item">
-                      <div class="name" value="{{projectB}}">{{projectB}}</div>
-             <div class="text" value="{{summaryB}}">{{summaryB}}
-             </div>
-           </div>
-           {{/if}}
-           {{#if projectC}}
-           <div class="section__list-item">
-                      <div class="name" value="{{projectC}}">{{projectC}}</div>
-             <div class="text" value="{{summaryC}}">{{summaryC}}
-             </div>
-           </div>
-           {{/if}}
-         </div>
-      </div>
-      {{/if}}
-       <div class="section">
-         <div class="section__title">Skills</div>
-         <div class="skills">
-           <div class="skills__item">
-             <div class="left"><div class="name">{{skills}}
-               </div></div>
-           </div>
-           
-         </div>           
-         </div>
-       <div class="section">
-       <div class="section__title">
-         Awards
-         </div>
-         <div class="section__list">
-           <div class="section__list-item">
-                    {{awards}}
-            </div>
-         </div>
-       </div>
-       </div>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item app__name" href="/">
+      RESUME BUILDER
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu navbar-before-login visible">
+    <div class="navbar-end">
+      <a href="/signin" class="navbar-item nav-individual signup__link">
+        Sign up
+      </a>
+      <a href="/login" class="navbar-item nav-individual login__link">
+        Log in
+      </a>
     </div>
   </div>
-  <button id="cmd">Convert to PDF</button>
+  <div id="navbarBasicExample" class="navbar-menu  navbar-after-login hidden">
+    <div class="navbar-end">
+      <a class="navbar-item is-active nav-individual" href='/index'>
+        Home
+      </a>
+      <a class="navbar-item nav-individual" href="/newResume">
+        New Resume
+      </a>
+      <a class="navbar-item logout__button nav-individual" href="/">
+        Log Out
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name" value="{{name}}">{{name}}</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val" value="{{email}}">{{email}}</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val" value="{{phoneNumber}}">{{phoneNumber}}</span>
+    </div>
+
+    <div class="about">
+      <span class="position">Objective</span>
+      <span class="desc" value="{{objective}}">{{objective}}
+      </span>
+    </div>
+  </div>
+  <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        {{#if employer}}
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{employer}}">{{employer}}</div>
+            <div class="duration" value="{{jobStart}} - {{jobEnd}}">{{jobStart}} - {{jobEnd}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{title}}">{{title}}</div>
+            <div class="desc" value="{{description}}">{{description}}</div>
+          </div>
+        </div>
+        {{/if}}
+        {{#if employerB}}
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{employerB}}">{{employerB}}</div>
+            <div class="duration" value="{{jobStartB}} - {{jobEndB}}">{{jobStartB}} - {{jobEndB}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{titleB}}">{{titleB}}</div>
+            <div class="desc" value="{{descriptionB}}">{{descriptionB}}</div>
+          </div>
+        </div>
+        {{/if}}
+        {{#if employerC}}
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{employerC}}">{{employerC}}</div>
+            <div class="duration" value="{{jobStartC}} - {{jobEndC}}">{{jobStartC}} - {{jobEndC}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{titleC}}">{{titleC}}</div>
+            <div class="desc" value="{{descriptionC}}">{{descriptionC}}</div>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="section">
+      {{#if school}}
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{school}}"></div>
+            <div class="duration" value="{{startDate}} - {{endDate}}">{{startDate}} - {{endDate}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{degree}}">{{degree}}</div>
+            <div class="desc" value="{{program}}">{{program}}</div>
+          </div>
+        </div>
+        {{#if schoolB}}
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{schoolB}}">{{schoolB}}</div>
+            <div class="duration" value="{{startDateB}} - {{endDateB}}">{{startDateB}} - {{endDateB}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{degreeB}}">{{degreeB}}</div>
+            <div class="desc" value="{{programB}}">{{programB}}</div>
+          </div>
+        </div>
+        {{/if}}
+        {{#if schoolC}}
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name" value="{{schoolC}}">{{schoolC}}</div>
+            <div class="duration" value="{{startDateC}} - {{endDateC}}">{{startDateC}} - {{endDateC}}</div>
+          </div>
+          <div class="right">
+            <div class="name" value="{{degreeC}}">{{degreeC}}</div>
+            <div class="desc" value="{{programC}}">{{programC}}</div>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+    </div>
+    {{#if project}}
+    <div class="section">
+      <div class="section__title">Projects</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="name" value="{{project}}">{{project}}</div>
+          <div class="text" value="{{summary}}">{{summary}}</div>
+        </div>
+        {{#if projectB}}
+        <div class="section__list-item">
+          <div class="name" value="{{projectB}}">{{projectB}}</div>
+          <div class="text" value="{{summaryB}}">{{summaryB}}
+          </div>
+        </div>
+        {{/if}}
+        {{#if projectC}}
+        <div class="section__list-item">
+          <div class="name" value="{{projectC}}">{{projectC}}</div>
+          <div class="text" value="{{summaryC}}">{{summaryC}}
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+    <div class="section">
+      <div class="section__title">Skills</div>
+      <div class="skills">
+        <div class="skills__item">
+          <div class="left">
+            <div class="name">{{skills}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">
+        Awards
+      </div>
+      <div class="section__list">
+        <div class="section__list-item">
+          {{awards}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<button id="cmd">Convert to PDF</button>

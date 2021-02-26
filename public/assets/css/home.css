@@ -1,6 +1,9 @@
 nav {
   height: 50px;
 }
+.app__name:hover {
+  background-color: none;
+}
 .home__container {
   background-image: url("../../images/homepageMobile.jpg");
   background-size: cover;

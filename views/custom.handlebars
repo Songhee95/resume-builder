@@ -10,223 +10,260 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 
 </head>
-    <main class="columns">
-        <div class="column is-2"></div>
-        <section class="column is-8" id="content">
-            <section class="columns head">
-                <div class="column">
-                    <span class="name">{{name}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column contact-info">
-                    <span class="lightGrey">Email:</span>
-                    <span class="light-bold">{{email}}</span>
-                    <span class="bar"> | </span>
-                    <span class="lightGrey">Phone:</span>
-                    <span class="light-bold">{{phoneNumber}}</span>
-                </div>
-            </section>
-            <section class="columns border">
-                <div class=" column objective header">
-                    <span class="header">Objective</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column objective">
-                    <span class="longText">{{objective}}</span>
-                </div>
-            </section>
-            <br>
-            {{#if isSchool}}
-            <section class="columns">
-                <div class="column border header">
-                    <span class="header">Education</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{school}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{startDate}} - {{endDate}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column degree">
-                    <div class="degree">{{degree}}, {{program}}</div>
-                </div>
-            </section>
-            {{#if isSchoolB}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{schoolB}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{startDateB}} - {{endDateB}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column degree">
-                    <div class="degree">{{degreeB}}, {{programB}}</div>
-                </div>
-            </section>
-            {{/if}}
-            {{#if isSchoolC}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{schoolC}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{stardDateC}} - {{endDateC}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column degree">
-                    <div class="degree">{{degreeC}}, {{programC}}</div>
-                </div>
-            </section>
-            {{/if}}
-            {{/if}}
-            {{#if isEmployer}}
-            <section class="columns">
-                <div class="column border header">
-                    <span class="header">Experience</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{employer}}</span>
-                    <span class="bar"> - </span>
-                    <span class="jobTitle">{{title}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{jobStart}} - {{jobEnd}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <span class="description">{{description}}
-                    </span>
-                </div>
-            </section>
-            {{#if isEmployerB}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{employerB}}</span>
-                    <span class="bar"> - </span>
-                    <span class="jobTitle">{{titleB}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{jobStartB}} - {{jobEndB}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{descriptionB}}
-                    </small>
-                </div>
-            </section>
-            {{/if}}
-            {{#if isEmployerC}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{employerC}}</span>
-                    <span class="bar"> - </span>
-                    <span class="jobTitle">{{titleC}}</span>
-                </div>
-                <div class="column date">
-                    <span class="date">{{jobStartC}} - {{jobEndC}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{descriptionC}}
-                    </small>
-                </div>
-            </section>
-            {{/if}}
-            {{/if}}
-            {{#if isProject}}
-            <section class="columns">
-                <div class="column border header">
-                    <span class="header">Projects</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{project}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{summary}}
-                    </small>
-                </div>
-            </section>
-            {{#if isProjectB}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{projectB}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{summmaryB}}
-                    </small>
-                </div>
-            </section>
-            {{/if}}
-            {{#if isProjectC}}
-            <section class="columns">
-                <div class="column focus">
-                    <span class="bold">{{projectC}}</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{summaryC}}
-                    </small>
-                </div>
-            </section>
-            {{/if}}
-            {{/if}}
-            <section class="columns">
-                <div class="column border header">
-                    <span class="header">Skills</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{skills}}
-                    </small>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="column border header">
-                    <span class="header">Awards</span>
-                </div>
-            </section>
-            <section class="columns">
-                <div class="space"></div>
-                <div class="column description">
-                    <small class="description">{{awards}}
-                    </small>
-                </div>
-            </section>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item app__name" href="/">
+            RESUME BUILDER
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu navbar-before-login visible">
+        <div class="navbar-end">
+            <a href="/signin" class="navbar-item nav-individual signup__link">
+                Sign up
+            </a>
+            <a href="/login" class="navbar-item nav-individual login__link">
+                Log in
+            </a>
+        </div>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu  navbar-after-login hidden">
+        <div class="navbar-end">
+            <a class="navbar-item is-active nav-individual" href='/index'>
+                Home
+            </a>
+            <a class="navbar-item nav-individual" href="/newResume">
+                New Resume
+            </a>
+            <a class="navbar-item logout__button nav-individual" href="/">
+                Log Out
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="columns">
+    <div class="column is-2"></div>
+    <section class="column is-8" id="content">
+        <section class="columns head">
+            <div class="column">
+                <span class="name">{{name}}</span>
+            </div>
         </section>
-        <div class="column is-2"></div>
-    </main>
+        <section class="columns">
+            <div class="column contact-info">
+                <span class="lightGrey">Email:</span>
+                <span class="light-bold">{{email}}</span>
+                <span class="bar"> | </span>
+                <span class="lightGrey">Phone:</span>
+                <span class="light-bold">{{phoneNumber}}</span>
+            </div>
+        </section>
+        <section class="columns border">
+            <div class=" column objective header">
+                <span class="header">Objective</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="column objective">
+                <span class="longText">{{objective}}</span>
+            </div>
+        </section>
+        <br>
+        {{#if isSchool}}
+        <section class="columns">
+            <div class="column border header">
+                <span class="header">Education</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{school}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{startDate}} - {{endDate}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column degree">
+                <div class="degree">{{degree}}, {{program}}</div>
+            </div>
+        </section>
+        {{#if isSchoolB}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{schoolB}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{startDateB}} - {{endDateB}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column degree">
+                <div class="degree">{{degreeB}}, {{programB}}</div>
+            </div>
+        </section>
+        {{/if}}
+        {{#if isSchoolC}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{schoolC}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{stardDateC}} - {{endDateC}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column degree">
+                <div class="degree">{{degreeC}}, {{programC}}</div>
+            </div>
+        </section>
+        {{/if}}
+        {{/if}}
+        {{#if isEmployer}}
+        <section class="columns">
+            <div class="column border header">
+                <span class="header">Experience</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{employer}}</span>
+                <span class="bar"> - </span>
+                <span class="jobTitle">{{title}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{jobStart}} - {{jobEnd}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <span class="description">{{description}}
+                </span>
+            </div>
+        </section>
+        {{#if isEmployerB}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{employerB}}</span>
+                <span class="bar"> - </span>
+                <span class="jobTitle">{{titleB}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{jobStartB}} - {{jobEndB}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{descriptionB}}
+                </small>
+            </div>
+        </section>
+        {{/if}}
+        {{#if isEmployerC}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{employerC}}</span>
+                <span class="bar"> - </span>
+                <span class="jobTitle">{{titleC}}</span>
+            </div>
+            <div class="column date">
+                <span class="date">{{jobStartC}} - {{jobEndC}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{descriptionC}}
+                </small>
+            </div>
+        </section>
+        {{/if}}
+        {{/if}}
+        {{#if isProject}}
+        <section class="columns">
+            <div class="column border header">
+                <span class="header">Projects</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{project}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{summary}}
+                </small>
+            </div>
+        </section>
+        {{#if isProjectB}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{projectB}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{summmaryB}}
+                </small>
+            </div>
+        </section>
+        {{/if}}
+        {{#if isProjectC}}
+        <section class="columns">
+            <div class="column focus">
+                <span class="bold">{{projectC}}</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{summaryC}}
+                </small>
+            </div>
+        </section>
+        {{/if}}
+        {{/if}}
+        <section class="columns">
+            <div class="column border header">
+                <span class="header">Skills</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{skills}}
+                </small>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="column border header">
+                <span class="header">Awards</span>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="space"></div>
+            <div class="column description">
+                <small class="description">{{awards}}
+                </small>
+            </div>
+        </section>
+    </section>
+    <div class="column is-2"></div>
+</main>
 
 <div class="field is-grouped is-grouped-left pt-6 pl-6">
 
