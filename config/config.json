@@ -1,20 +1,23 @@
 {
   "development": {
-    "username": "wxm1dir55rvi7gja",
-    "password": "zzf9m19egzg4e34y",
-    "database": "qk37bat9pspo979g",
-    "host": "mysql://wxm1dir55rvi7gja:zzf9m19egzg4e34y@phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qk37bat9pspo979g",
+    "username": "root",
+    "password": "dmwm9191@A",
+    "database": "resumes_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "wxm1dir55rvi7gja",
-    "password": "zzf9m19egzg4e34y",
-    "database": "qk37bat9pspo979g",
-    "host": "mysql://wxm1dir55rvi7gja:zzf9m19egzg4e34y@phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qk37bat9pspo979g",
+    "username": "root",
+    "password": "dmwm9191@A",
+    "database": "resumes_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable" : "JAWSDB_URL",
-    "dialect" : "mysql"
+    "username": "root",
+    "password": "dmwm9191@A",
+    "database": "resumes_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
 }

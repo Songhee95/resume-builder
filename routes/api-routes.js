@@ -45,6 +45,8 @@ module.exports = function (app) {
   });
 
   app.post("/api/newResume", (req, res) => {
+    console.log("😀😀😀😀😀😀");
+    console.log(req.body);
     db.Resume.create(req.body)
       .then((result) => {
         res.json(result);
