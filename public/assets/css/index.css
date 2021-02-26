@@ -5,10 +5,18 @@
 }
 .index-title {
   font-size: 30px;
+  font-weight: 500;
 }
 .index-intro {
   margin: 20px 100px;
 }
+.index-intro > p {
+  margin: 10px;
+}
 .index-resume-list-container {
   margin: 20px 100px;
+}
+.index-resume-total {
+  font-size: 18px;
+  font-weight: 500;
 }
