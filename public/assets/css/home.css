@@ -24,6 +24,16 @@ nav {
   text-align: center;
   background-color: rgba(240, 248, 255, 0.5);
 }
+.index-footer {
+  height: 60px;
+  background-color: #4a4a4a;
+  padding-top: 20px;
+  color: white;
+}
+.index-footer > .content > strong {
+  color: white;
+}
+
 @media screen and (min-width: 620px) {
   .home__container {
     height: 600px;
