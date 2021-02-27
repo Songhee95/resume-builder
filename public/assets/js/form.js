@@ -15,7 +15,6 @@ $(document).ready(function () {
     index = index.toString();
     let letter = String.fromCharCode(65 + educationCounter);
     //update school id
-    console.log($clone);
     $clone
       .find(".school")
       .attr("id", "school" + letter)
@@ -45,12 +44,30 @@ $(document).ready(function () {
       .attr("id", "program" + letter)
       .val("")
       .end();
-
     $clone.attr("data-index", index);
     $(".formContainer").append($clone);
     $($clone).insertBefore("#addEducation");
     localStorage.setItem("educationCounter", JSON.stringify(educationCounter));
   });
+  $("#deleteEducation").on("click", function () {
+    if ($(this).prev().prev().attr("data-index") == 1) {
+      return false;
+    }
+    $(this).prev().prev().remove();
+  });
+  $("#deleteExperience").on("click", function () {
+    if ($(this).prev().prev().attr("data-index") == 1) {
+      return false;
+    }
+    $(this).prev().prev().remove();
+  });
+  $("#deleteProject").on("click", function () {
+    if ($(this).prev().prev().attr("data-index") == 1) {
+      return false;
+    }
+    $(this).prev().prev().remove();
+  });
+
   $("#addExperience").on("click", function () {
     experienceCounter++;
     const $clone = $(".experience").first().clone();
