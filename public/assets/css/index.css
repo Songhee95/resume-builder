@@ -30,6 +30,23 @@
 figure {
   padding: 15px;
 }
+figure > img {
+  border-radius: 1rem;
+}
 figure > img:hover {
   opacity: 0.8;
+}
+.resumeEditButton,
+.resumeDeleteButton {
+  padding: 5px 15px;
+  margin: 0 10px;
+  font-size: 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid rgb(156, 156, 6);
+  background-color: rgb(238, 238, 200);
+}
+.resumeEditButton:hover,
+.resumeDeleteButton:hover {
+  background-color: #ddd;
 }
