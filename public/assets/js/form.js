@@ -15,15 +15,36 @@ $(document).ready(function () {
     index = index.toString();
     let letter = String.fromCharCode(65 + educationCounter);
     //update school id
-    $clone.find(".school").attr("id", "school" + letter);
+    console.log($clone);
+    $clone
+      .find(".school")
+      .attr("id", "school" + letter)
+      .val("")
+      .end();
     //update degree id
-    $clone.find(".degree").attr("id", "degree" + letter);
+    $clone
+      .find(".degree")
+      .attr("id", "degree" + letter)
+      .val("")
+      .end();
     //update startdate id
-    $clone.find(".startDate").attr("id", "startDate" + letter);
+    $clone
+      .find(".startDate")
+      .attr("id", "startDate" + letter)
+      .val("")
+      .end();
     //update enddate id
-    $clone.find(".endDate").attr("id", "endDate" + letter);
+    $clone
+      .find(".endDate")
+      .attr("id", "endDate" + letter)
+      .val("")
+      .end();
     //update program id
-    $clone.find(".program").attr("id", "program" + letter);
+    $clone
+      .find(".program")
+      .attr("id", "program" + letter)
+      .val("")
+      .end();
 
     $clone.attr("data-index", index);
     $(".formContainer").append($clone);
@@ -39,16 +60,32 @@ $(document).ready(function () {
     let letter = String.fromCharCode(65 + experienceCounter);
     //update employer id
     let newEmployer = "employer" + letter;
-    $clone.find(".employer").attr("id", newEmployer);
+    $clone.find(".employer").attr("id", newEmployer).val("").end();
     // $clone.find('#employer').css("background-color", "red");
     //update title id
-    $clone.find(".jobTitle").attr("id", "title" + letter);
+    $clone
+      .find(".jobTitle")
+      .attr("id", "title" + letter)
+      .val("")
+      .end();
     //update start id
-    $clone.find(".jobStart").attr("id", "jobStart" + letter);
+    $clone
+      .find(".jobStart")
+      .attr("id", "jobStart" + letter)
+      .val("")
+      .end();
     //update end id
-    $clone.find(".jobEnd").attr("id", "jobEnd" + letter);
+    $clone
+      .find(".jobEnd")
+      .attr("id", "jobEnd" + letter)
+      .val("")
+      .end();
     //update description
-    $clone.find(".description").attr("id", "description" + letter);
+    $clone
+      .find(".description")
+      .attr("id", "description" + letter)
+      .val("")
+      .end();
 
     $clone.attr("data-index", index);
     $(".formContainer").append($clone);
@@ -66,9 +103,17 @@ $(document).ready(function () {
     index = index.toString();
     let letter = String.fromCharCode(65 + projectCounter);
     //update project id
-    $clone.find(".project").attr("id", "project" + letter);
+    $clone
+      .find(".project")
+      .attr("id", "project" + letter)
+      .val("")
+      .end();
     //update summary id
-    $clone.find(".summary").attr("id", "summary" + letter);
+    $clone
+      .find(".summary")
+      .attr("id", "summary" + letter)
+      .val("")
+      .end();
 
     $clone.attr("data-index", index);
     $(".formContainer").append($clone);

@@ -36,17 +36,14 @@
     </div>
 </nav>
 
-<body class="has-background-info-light">
-    <main class="has-text-black">
-        <section class="column is-half is-offset-one-quarter formContainer">
-            <section>
-                <form class="field">
-                    <label class="label">Resume Name</label>
-                    <div class="control">
-                        <input type="text" id="resumeName" size="30"><br><br>
-                    </div>
-                </form>
-            </section>
+<div class="has-background-info-light">
+    <section class="column is-half is-offset-one-quarter formContainer">
+        <div class='form__section__divide'>
+            <label class="label">Resume Name</label>
+            <div class="control">
+                <input type="text" id="resumeName" size="30"><br><br>
+            </div>
+
             <div class="field is-horizontal columns">
                 <div class="column">
                     <label class="label">Name</label>
@@ -67,13 +64,15 @@
                     </div>
                 </div>
             </div>
-            <section class="objectiveContainer">
-                <form id="objectiveForm">
+            <div class="objectiveContainer">
+                <div id="objectiveForm">
                     <label class="label">Objective Statement</label>
                     <textarea type="text" class="textarea" id="objective" name="objective" rows="3" cols="20"
                         placeholder="What is your objective?"></textarea><br>
-                </form>
-            </section>
+                </div>
+            </div>
+        </div>
+        <div class='form__section__divide'>
             <section class="education" data-index="1">
                 <form id="educationForm" class="field">
                     <label class="label">Education</label>
@@ -105,7 +104,10 @@
                     </div>
                 </form>
             </section>
-            <button type="button" id="addEducation">Add Education</button><br><br>
+            <button type="button" id="addEducation">Add Education</button>
+            <button type="button" id="deleteEducation">Delete this Education</button>
+        </div>
+        <div class='form__section__divide'>
             <section class="experience" data-index="1">
                 <form id="experienceForm">
                     <label class="label">Experience</label>
@@ -143,6 +145,8 @@
 
             </section>
             <button type="button" id="addExperience">Add Experience</button><br><br>
+        </div>
+        <div class='form__section__divide'>
             <section class="project" data-index="1">
                 <form id="projectForm">
                     <label class="label">Projects</label>
@@ -169,19 +173,19 @@
                         placeholder="List your relevant awards"></textarea>
                 </form>
             </section>
+        </div>
 
-            <div class="field is-grouped is-grouped-left pt-4">
-                <p class="control">
-                    <a class="button is-success is-light" id="saveButton">
-                        Save Resume
-                    </a>
-                </p>
-                <p class="control">
-                    <a class="button is-danger is-light" id="cancelButton">
-                        Cancel
-                    </a>
-                </p>
-            </div>
-        </section>
-    </main>
-</body>
+        <div class="field is-grouped pt-4">
+            <p class="control">
+                <a class="button is-success is-light" id="saveButton">
+                    Save Resume
+                </a>
+            </p>
+            <p class="control">
+                <a class="button is-danger is-light" id="cancelButton">
+                    Cancel
+                </a>
+            </p>
+        </div>
+    </section>
+</div>
